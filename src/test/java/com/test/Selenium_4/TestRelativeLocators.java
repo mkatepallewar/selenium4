@@ -4,6 +4,9 @@ package com.test.Selenium_4;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
 import static org.openqa.selenium.support.locators.RelativeLocator.withTagName;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -14,9 +17,12 @@ public class TestRelativeLocators {
 	
 	
 	public static void main(String[] args) {
+//		WebDriverManager.chromedriver().setup();
+//		WebDriver driver=new ChromeDriver();
 		
-		WebDriverManager.chromedriver().setup();
-		WebDriver driver=new ChromeDriver();
+		WebDriverManager.firefoxdriver().setup();
+		WebDriver driver=new FirefoxDriver();
+
 		driver.get("http://way2automation.com/way2auto_jquery/index.php");
 		driver.manage().window().maximize();
 		
